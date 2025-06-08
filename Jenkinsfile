@@ -6,23 +6,23 @@ pipeline{
 	}
 	stages{
 		stage('Checkout'){
-			step{
-				git branch:'master',url:'https://github.com/varun0981/varungrad.git'
+		step{
+		 git branch:'master',url:'https://github.com/varun0981/varungrad.git'
 			}
 		}
 		stage('Build'){
-			step{
-				sh'gradle run'
+		step{
+		sh'gradle run'
 			}
 		}
 		stage('Test'){
-			step{
-				sh'gradle test'
+		step{
+		sh'gradle test'
 			}
 		}
 		stage('Run Application'){
-			step{
-				sh'gradle run'
+		step{
+		sh'gradle run'
 			}
 		}
 	}
